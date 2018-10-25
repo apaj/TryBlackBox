@@ -1,6 +1,8 @@
 package tryblackbox
 
 import chisel3._
+import chisel3.util._
+import chisel3.experimental._
 import chisel3.util.HasBlackBoxResource
 
 class TryBlackBox extends BlackBox with HasBlackBoxResource {
@@ -9,5 +11,5 @@ class TryBlackBox extends BlackBox with HasBlackBoxResource {
     val in2 = Input(UInt(64.W))
     val out = Output(UInt(64.W))
   })
-  setResource("/tryblackbox/tryMe.v")
+  setResource("/tryblackbox/TryBlackBox.v")
 }
